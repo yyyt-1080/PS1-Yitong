@@ -6,7 +6,7 @@ Fork this repository, import your fork into Overleaf, and develop Intellectual S
 
 ## Start in your own account
 
-1. Open [https://github.com/sunshineluyao/ps1-overleaf-template](https://github.com/sunshineluyao/ps1-overleaf-template) and select **Fork**. Create the fork under your own GitHub account.
+1. **Fork** this repo to your own personal account. Create the fork under your own GitHub account.
 2. If you have Overleaf GitHub synchronization, link your GitHub account in Overleaf Account Settings. From the Overleaf dashboard choose **New project → GitHub repo**, select **your fork**, then **Import to Overleaf**.
 3. Otherwise, in your fork choose **Code → Download ZIP**. In Overleaf choose **New project → Upload Project** and upload that ZIP. This route does not require GitHub synchronization.
 4. Set the main document to `main.tex`, compiler to **pdfLaTeX**, and use the current available TeX Live environment. Recompile; a bibliography refresh may need another pass.
