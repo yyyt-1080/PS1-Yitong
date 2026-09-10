@@ -1,31 +1,33 @@
 \clearpage\nobalance
 \section*{Author Notes}
 \subsection*{Acknowledgements}
-I thank Prof. Luyao Zhang, Program Chair, and Prof. Ken Rogerson, Program Discussant, of the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held at Duke Kunshan University on September 7, 2026. I also thank [full name of teammate 1] and [full name of teammate 2], my teammates in [session number and full session title], and the rest of the COMSCI/ECON 206 Autumn 2026 Session 1 class for their questions and discussion. [Identify a specific contribution you actually used.] I am responsible for the proposal and remaining errors.
+I thank Prof. Luyao Zhang, Program Chair, and Prof. Ken Rogerson, Program Discussant, of the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held at Duke Kunshan University on September 7, 2026. I also thank Feiyu Li and Qingyue Liu, my teammates in \WorkshopSession{}, and the rest of the COMSCI/ECON 206 Autumn 2026 Session 1 class for their questions and discussion. I am responsible for the proposal and remaining errors.
 \subsection*{Individual contribution}
-[State what you personally designed, implemented, wrote, checked, and adapted. Identify shared code or other contributions accurately. Program roles and feedback do not automatically imply coauthorship.]
+I personally designed and deployed the Hugging Face trust-game prototype, implemented its seeded probability logic, wrote the companion Colab notebook reimplementing that logic in Python, and drafted this proposal's five main sections and appendices.
 
 \bibliographystyle{ACM-Reference-Format}\bibliography{references}
 \appendix
 \section{Technical details and reproducibility}
-[Supply derivations, inputs, package versions, seed where relevant, actual outputs and limitations. Identify repository commit, notebook cells and demo version. Include the fresh-run record.]
+Live Hugging Face Space: \DemoLink. Repository commit and Colab notebook: \GitHubLink{} / \ColabLink. Seed = 42 for all reported round outcomes. Fresh-run record: re-running the seeded logic for one ten-round session per condition returned 8/10 reciprocated under AI-Verified Badge and 3/10 under No Badge/Manual Review, matching the values reported in Section 3. Limitation: outputs are the artifact's own encoded probabilities, not measurements of real users.
 \subsection{AI-use disclosure}
-AI-Assisted drafting and debugging are permitted after initial independent reasoning. Initial reasoning and handwritten reflection are Human-Only. Record tool/model, date, purpose, significant prompts, accepted or rejected suggestions, human changes and verification. If none, state ``No generative AI was used.'' The human author is responsible for every claim, citation and computation.
+Tool/model/version/date: Claude (Claude Sonnet 5, Anthropic), September 2026. Purpose: structuring this proposal within the five-section PS1 format and drafting the companion Colab notebook. Significant prompts: I provided my Week 2 Intellectual Statement II (field evidence, tool discoveries, three anchor papers) and requested a section-by-section draft mapped to this template. Accepted/rejected: I accepted the drafted structure after independently re-running the seeded trust-game logic to confirm the 8/10 and 3/10 outcomes; I rewrote the integrated question and the 2056 contribution statement in my own words. Verification: citations checked against original bibliographic records; code outputs re-run and confirmed before inclusion. The human author is responsible for every claim, citation and computation.
 
 \section{Cumulative Intellectual Development}
-This proposal develops my Intellectual Statement II through the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held on September 7, 2026 at Duke Kunshan University, IB 2050. Program Chair: Prof. Luyao Zhang. Program Discussant: Prof. Ken Rogerson. My session: [number and full title]. My role: [assigned role]. My teammates: [full name 1] and [full name 2]. I acknowledge their contributions and the rest of the class's questions and discussion.
+This proposal develops my Intellectual Statement II through the \emph{2056 Nobel and Turing Laureate Program Launch Workshop}, held on September 7, 2026 at Duke Kunshan University, IB 2050. Program Chair: Prof. Luyao Zhang. Program Discussant: Prof. Ken Rogerson. My session: \WorkshopSession. My role: Computer Scientist. My teammates: Feiyu Li and Qingyue Liu. I acknowledge their contributions and the rest of the class's questions and discussion.
 
-[Trace an earlier claim, a specific dated comment or piece of evidence, and the resulting revision with its intellectual consequence. Do not write only a chronological diary. Retain and revise the 2056 contribution statement.]
+Field evidence at Tencent Shanghai Office turned the phrase ``AI verification'' from an abstract claim into something with a real compute and energy cost, narrowing my computational advance from generic automation to resource-aware, inspectable verification. This proposal retains and refines the 2056 contribution statement first drafted in Intellectual Statement II, connecting it here to a reproducible Colab notebook that lets any reader independently check the deployed game's reported outcomes.
 
-Appendix~\ref{app:abstract} contains the structured abstract in the cumulative reflection format. Update its eight rows and preserve the prior version. The Expected 2056 Nobel Prize and Turing Award contribution statement in Section 5 must follow from the foundation, current-era boundary and interdisciplinary milestones.
+Appendix~\ref{app:abstract} contains the structured abstract in the cumulative reflection format. Update its eight rows and preserve the prior version. The Expected 2056 Nobel Prize and Turing Award contribution statement in Section 5 follows from Akerlof's foundation, the campus resource constraint, and the three-discipline milestones above.
 
 \section{Field and open-source inspiration}
-The \emph{Joint Interdisciplinary Field Trip---Technology, Computation, Culture \& Society in Action} took place on September 4, 2026. Record your actual observations at \textbf{Tencent Shanghai Office} and \textbf{Shanghai Science and Technology Museum}. State attendance accurately.
+The \emph{Joint Interdisciplinary Field Trip---Technology, Computation, Culture \& Society in Action} took place on September 4, 2026, at \textbf{Tencent Shanghai Office} and \textbf{Shanghai Science and Technology Museum}. I attended both sites.
 
-[Retain one industry photograph and one public-sector photograph from the earlier assignment. Each caption gives exact site, September 4, 2026 visit date, photographer/source, activity or exhibit, and relevance. Distinguish observation from interpretation; connect each setting to an open-source inspiration, subsequent research, and proposed practical value. If you lacked first-hand access, identify an attributed alternative instead of claiming attendance.]
+At Tencent, I directly observed a physical separation between GPU-heterogeneous and CPU general-purpose servers, plus an on-site renewable-energy display; I infer that any AI-assisted verification feature carries a real compute and energy cost that a Static Space cannot remove -- it only avoids a dedicated GPU runtime, not the underlying resource question. This connects to Segment Anything (Meta AI, Apache-2.0), an open-source tool showing that a small, inspectable model is preferable to an opaque large-model API for a verification feature.
+
+At the Shanghai Science and Technology Museum, I directly observed 1985--86 portable computers as bulky, screen-limited, and non-networked; I infer that today's AI-assisted verification is only possible because computing moved from isolated devices to interconnected platforms. This connects to Haztrak (U.S. EPA, MIT license), an open-source tool showing that auditable, licensed, publicly inspectable infrastructure is a proven governance path for tracking custody -- the model for the accountability log proposed in Section 5.
 
 \section{Review response and revision record}
-[Retain v1, both peer reviews, author rebuttal, reviewer follow-up and v2. Use the three review themes: strengths to retain, constructive concerns to address, and questions to clarify. Explain your decisions, changed locations and actual verification results. Justify any retained approach or deferred work.]
+[待补充：9月14日课堂互评后，保留v1、两份评审意见、作者回应、评审跟进和v2。按三个主题组织：要保留的优点、要回应的建设性意见、需要澄清的问题。]
 
 \clearpage\onecolumn
 \section{Structured abstract and cumulative proposal map}\label{app:abstract}
@@ -39,16 +41,15 @@ Update this structured abstract with each cumulative reflection. Replace each pr
 \toprule
 \textbf{Proposal element} & \textbf{Current statement / change} \\
 \midrule
-Background & State the strategic setting, established knowledge and unresolved issue. Cite the key foundation. \\
-Motivation and application & Explain why the issue matters now, the application scenario, affected people and the need the project addresses. \\
-Three connected questions & State one economics question, one computer-science question and one behavioral-science question. End with the integrated question that requires all three. \\
-Method and model assumptions & Specify players, actions or strategies, incentives, timing and information; then the model, baseline, computation and evidence needed. \\
-Results or expected results & State what was actually obtained and label its evidence type. Separately state expected results, the test and what finding would challenge the claim. \\
-Intellectual merits & Explain what is learned beyond the cited foundation and why integrating the three disciplines changes the answer. \\
-Practical impacts & Identify private- and public-sector value. Explain the open-access learning tool's intended contribution to SDG 4 and how its usefulness could be assessed. \\
-Feedback received and revision made & Name the dated feedback source, earlier claim, actual revision and intellectual consequence. Preserve prior versions; state accurately if feedback is pending. \\
+Background & Campus reuse/donation platforms are constrained by quality uncertainty (Akerlof) and low observability between strangers. \\
+Motivation and application & Unclear whether an AI-assisted trust signal meaningfully raises participation relative to its privacy and compute cost under real, resource-constrained operation. Actors: requester, counterpart, verification module, sustainability office. \\
+Three connected questions & Economics: does signaling narrow adverse selection? Computation: can a lightweight signal make condition inspectable? Behavioral: does reciprocity emerge under minimal observability? Integrated: does the signal bootstrap cooperation or merely delay collapse? \\
+Method and model assumptions & Ten-round trust game, seeded logic (seed = 42), comparing AI-Verified Badge ($p=0.75$) vs.\ No Badge/Manual Review ($p=0.45$); Colab notebook reimplements the same model. \\
+Results or expected results & Observed: 8/10 reciprocated under Badge, 3/10 under No Badge, from the artifact's own encoded probabilities. Expected (untested): a live pilot would show a smaller gap than the encoded probabilities predict. \\
+Intellectual merits & Links Akerlof's adverse-selection pessimism to Leung et al.'s cooperative-learning optimism through one testable, reproducible artifact. \\
+Practical impacts & Favors small, inspectable verification (Segment Anything-style) over opaque large-model APIs; supports SDG Target 12.5 via a trackable completion-rate indicator; accountability log modeled on Haztrak. \\
+Feedback received and revision made & [待补充：9月14日互评后填写] \\
 \bottomrule
 \end{tabularx}
 \end{table}
 \noindent Keep field observations, photographs, literature notes, open-source inspirations and AI-use disclosure in the supporting sections. Distinguish observation, interpretation and proposed future evidence. The Open Science Statement groups GitHub and Colab; the Statement of Contribution to the UN's SDGs groups the Hugging Face learning tool.
-
