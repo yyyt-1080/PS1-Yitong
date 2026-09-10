@@ -1,50 +1,40 @@
-\section{Three connected research questions}
-Start from Intellectual Statement II. State the background, motivation, application, affected stakeholders, and strategic tension. Explain your proposal's relationship to a Nobel-recognized foundation and current research.
+\section{Three Connected Questions}
+\textbf{Economics:} Under quality uncertainty, does a signaling mechanism narrow adverse selection enough to sustain stranger-to-stranger exchange, or does it merely delay market unraveling? \textbf{Computer Science:} Can a lightweight, client-side AI signal make item condition inspectable without a dedicated compute runtime or opaque large-model judgment? \textbf{Behavioral Science:} Does opponent-specific reciprocity emerge among strangers under minimal observability, and how much does an external signal change that emergence? \textbf{Integrated question:} Under a fixed compute and privacy budget, does an AI-assisted trust signal increase completed stranger-to-stranger exchanges on a campus circular-economy platform, and is its effect closer to Akerlof's ``not enough to prevent collapse'' or Leung et al.'s ``enough to bootstrap cooperation''?
 
-\textbf{Q1---Economics:} [Which incentive, welfare, allocation, or institutional question needs an answer?]\par
-\textbf{Q2---Computation:} [Which model, algorithm, or evaluation makes the answer checkable?]\par
-\textbf{Q3---Behavior:} [Which belief, preference, reasoning limit, or learning mechanism could alter the prediction?]
+\section{Answer to Q1: Economics}
+Akerlof's~\cite{akerlof1970} classical result shows that unresolved information asymmetry about quality can depress or collapse a market. A campus exchange platform faces exactly this problem: buyers cannot verify a listed item's true condition before a transaction. Players are the requester (buyer) and the counterpart (seller); actions are list, verify, and trust/decline; payoffs depend on whether the transaction completes and whether the item matches its stated condition. The proposed mechanism narrows, but does not eliminate, this asymmetry through a lightweight verification signal, tested against a no-signal baseline to measure how much of the adverse-selection gap the signal actually closes.
 
-Explain why the answers depend on one another. Cite relevant economics, computer-science, and behavioral-science papers. Refer to Figure~\ref{fig:teaser} and explain how its mechanism connects your questions.
-
-\section{Answer to Q1: incentives and intellectual lineage}
-State a provisional answer or falsifiable hypothesis. Define players, actions versus strategies, payoffs, timing, and information. Name the solution concept and cite its defining paper, such as Nash~\cite{nash1950} or Bayesian equilibrium~\cite{harsanyi1968}. State what the benchmark establishes and what it leaves unresolved. Distinguish hypothetical, observed, estimated, and inherited quantities.
-
-\section{Answer to Q2: method and evaluation}
-Explain the computational part of Figure~\ref{fig:teaser}: inputs, algorithm, baseline, metric, and a meaningful mathematical or computational check. Specify your smallest feasible experiment and one modification to the baseline. State the actual outputs obtained; label every untested outcome as expected or planned. Your Colab notebook and interactive game must explain the same research question and identify any differences in model or scope.
+\section{Answer to Q2: Computation}
+The mechanism is implemented as a Hugging Face Static Space (\DemoLink), using client-side HTML/CSS/JavaScript only, with no dedicated CPU/GPU runtime, backend, database, or API key. The prototype runs a ten-round trust game under two conditions -- AI-Verified Badge ($p=0.75$) and No Badge/Manual Review ($p=0.45$) -- with seeded logic (seed = 42) so every reported outcome is reproducible. Running the Space's own seeded logic for one ten-round session per condition returned reciprocation in 8 of 10 rounds (80\%) under the Badge condition and 3 of 10 rounds (30\%) under No Badge; these are the artifact's own encoded, illustrative probabilities, not measurements of real campus users. A companion Colab notebook (\ColabLink) reimplements the same probability model in Python to independently verify these round-by-round outcomes.
 
 \clearpage\balance
-\section{Answer to Q3: behavior and competing explanations}
-Identify a behavioral mechanism and a competing explanation. Describe evidence that would discriminate between them. Explain how this changes the economic model or computational design. State the limits of what the planned evidence can identify. Synthetic or simulated results do not establish human or real AI behavior. Include a feasible next test and what finding would change your mind.
+\section{Answer to Q3: Behavior}
+Morozov and Feigel~\cite{morozovfeigel2026} show that strangers can sustain cooperation without full observability through opponent-specific responses, rather than requiring repeated identity tracking. The competing explanation is that any observed cooperation gap reflects only the stated badge probability, not a genuine behavioral response to trust signaling. Discriminating evidence would be a real-user trial where completion rates diverge from the encoded probabilities in a direction opponent-specific reciprocity predicts. Synthetic results from the seeded prototype cannot themselves establish human behavior; a feasible next test is a small live pilot comparing self-reported trust with actual completion under each condition, and a null result -- no behavioral difference beyond the encoded probability -- would change this conclusion.
 
-
-\section{Advanced development and future directions}
-Build on a named Nobel laureate's defining work and cite the award record. Identify an enduring human question---such as cooperation, fairness, trust or collective choice---and explain what the foundation establishes. Add a relevant Turing Award foundation where it clarifies the computational lineage.
-
-Explain what is distinctive about today's environment and technology, what current research leaves unresolved, and how your proposal advances that boundary. State the economic, computational and behavioral contributions and the new insight their integration makes possible.
+\section{Advanced Development and Future Directions}
+This proposal builds on Akerlof's~\cite{akerlof1970} 1970 Nobel-recognized foundation on information asymmetry in markets, and on the algorithmic-game-theory lineage connecting cooperation, minimal observability, and learning~\cite{leungetal2026}. The enduring human question is how strangers establish trust absent repeated identity or full observability. Today's distinctive environment is a resource-constrained campus platform where verification cannot rely on costly compute or persistent surveillance; current research leaves open how much a lightweight, inspectable signal actually substitutes for full observability, rather than assuming it fully solves adverse selection.
 
 \begin{table}[h]\caption{From laureate foundations to a new interdisciplinary contribution.}
 \begin{tabularx}{\columnwidth}{@{}p{1.6cm}Y@{}}\toprule
 \textbf{Horizon}&\textbf{Milestone and evidence}\\\midrule
-Foundation&[Laureate, defining work, enduring question and retained insight.]\\
-PS1&[Current-era setting, working baseline and meaningful check.]\\
-Next study&[New interdisciplinary explanation or design; a discriminating test.]\\
-Longer term&[Broader validation, benefits and reusable knowledge or tools.]\\
-2056&[Integrated contribution and evidence connecting it to the ambition below.]\\\bottomrule
+Foundation&Akerlof (1970): adverse selection under quality uncertainty; Leung et al. (2026, AAAI): cooperative learning under minimal observability.\\
+PS1&Ten-round trust game (Badge vs.\ No Badge), seeded logic, Colab-verified outputs (8/10 vs.\ 3/10).\\
+Next study&Add a live campus pilot comparing self-reported trust with actual completion under each condition.\\
+Longer term&Auditable accountability log (Haztrak-style) piloted with the campus sustainability office.\\
+2056&A lightweight, resource-aware trust-signaling protocol adopted by resource-constrained institutions.\\\bottomrule
 \end{tabularx}\end{table}
 
 \noindent\textbf{Expected 2056 Nobel Prize and Turing Award contribution statement.}
-By 2056, I aspire to be recognized for [theory, method or design] addressing [enduring human question] in [the current era's distinctive environment]. Building on [laureates and cited foundations], I will integrate [economics], [computer science] and [behavioral science] to advance [specific boundary]. Progress will be demonstrated by [milestones and evidence], with intellectual merits in [knowledge] and practical impacts for [people and institutions].
+By 2056, I aim to contribute a lightweight, auditable trust-signaling protocol for stranger-to-stranger circular-economy platforms by integrating opponent-specific reciprocity under minimal observability~\cite{morozovfeigel2026} (behavioral advance), signaling mechanisms that counteract adverse selection under quality uncertainty~\cite{akerlof1970} (economic advance), and resource-aware, inspectable AI verification components rather than opaque large-model judgments~\cite{leungetal2026} (computational advance), so that resource-constrained institutions can adopt trust infrastructure without unaccountable AI or unsustainable compute cost. This is an aspiration supported by course-scale milestones, not a prediction of an award.
 
 \subsection*{Open Science Statement}
 \textbf{GitHub:} \GitHubLink\\
 \textbf{Google Colab:} \ColabLink\par
-[Identify available code, data or synthetic inputs, notebook, dependencies, outputs, release/commit and actual reuse terms. Give the shortest reproducible run instruction.]
+The repository contains the deployed Space's HTML/CSS/JS source, a Python Colab notebook reimplementing the seeded trust-game logic (seed = 42), and this proposal's LaTeX source. Dependencies are limited to standard Python scientific packages installed in the notebook's setup cell. Shortest reproducible run: open the Colab link and run all cells to regenerate the 8/10 and 3/10 outcomes reported above. Released materials include the full game logic and seeded outputs; validation with real campus users remains a benefit awaiting evaluation, not a released result.
 
 \subsection*{Statement of Contribution to the UN's SDGs}
 \textbf{Hugging Face:} \DemoLink\\
-Through an open-access [tool], this project aims to support \textbf{SDG 4---Quality Education}~\cite{sdg4} by helping [audience] learn [concept] through [interaction]. [State access needs, learning instructions and a feasible evaluation.] Distinguish the resource released from benefits that remain to be evaluated.
+Through this open-access interactive trust game, this project aims to support \textbf{SDG Target 12.5}~\cite{sdg12} (substantially reduce waste generation through prevention, reduction, recycling, and reuse) by letting students and staff directly experience how a trust signal changes cooperation incentives in a stranger-to-stranger exchange. Mechanism: an AI-assisted trust signal lowers information asymmetry between strangers, raising the completed exchange/donation rate and diverting items from the waste stream. Observable indicator: the share of initiated exchange/donation requests that reach completion on the campus platform. Distinguishing released from evaluated benefits: the demo itself is released and playable now; its effect on real campus exchange behavior remains to be evaluated.
 
 \subsection*{Submission milestones}
 First draft: September 13, 2026, 11:00 P.M. Beijing time (UTC+8). Class review: September 14. Proposed: rebuttal September 16 and revised submission September 20, both at 11:00 P.M. Update Appendix~\ref{app:abstract} with each reflection and revision.
-
